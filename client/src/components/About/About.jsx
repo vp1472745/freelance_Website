@@ -93,17 +93,9 @@ const About = () => {
                   key={i}
                   className="rounded-2xl bg-[#181A20] border border-white/5 p-5 flex flex-col justify-between"
                 >
-                  <div className="flex items-center justify-between mb-3 gap-2">
-                    <span className={`font-black text-white font-sans leading-tight ${
-                      stat.value.length > 15 
-                        ? "text-sm sm:text-base" 
-                        : stat.value.length > 8 
-                        ? "text-lg sm:text-xl" 
-                        : "text-2xl"
-                    }`}>
-                      {stat.value}
-                    </span>
-                    <div className="shrink-0">{stat.icon}</div>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-2xl font-black text-white font-sans">{stat.value}</span>
+                    {stat.icon}
                   </div>
                   <span className="text-xs font-bold text-gray-400">{stat.label}</span>
                 </div>
