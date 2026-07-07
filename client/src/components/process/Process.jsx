@@ -83,7 +83,7 @@ const Process = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-7 lg:gap-4 relative"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 relative"
         >
           {steps.map((step, index) => (
             <motion.div
@@ -92,13 +92,6 @@ const Process = () => {
               className="relative flex flex-col justify-between rounded-2xl bg-[#181A20] border border-white/5 p-6 hover:border-[#A3FF12]/20 transition-all duration-300 group"
             >
               <div>
-                {/* Arrow connector for Desktop only */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 z-10 text-[#A3FF12]/20 group-hover:text-[#A3FF12]/50 transition-colors duration-300">
-                    <ArrowRight size={16} />
-                  </div>
-                )}
-                
                 {/* Number & Icon header */}
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-black text-gray-700 font-mono tracking-widest group-hover:text-[#A3FF12]/30 transition-colors">

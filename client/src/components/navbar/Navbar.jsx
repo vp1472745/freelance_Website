@@ -42,6 +42,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [open]);
+
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setOpen(false);
@@ -133,7 +144,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`fixed inset-x-0 top-[73px] bottom-0 z-40 bg-[#0b0b0f]/95 backdrop-blur-2xl transition-all duration-300 lg:hidden ${
+        className={`absolute inset-x-0 top-full h-[calc(100vh-100%)] z-40 bg-[#0b0b0f]/95 backdrop-blur-2xl overflow-y-auto transition-all duration-300 lg:hidden ${
           open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >

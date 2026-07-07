@@ -120,8 +120,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div>
-          <div className="lg:col-span-5 flex flex-col justify-between">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Left Column - Contact Info */}
+          <div className="lg:col-span-5 flex flex-col justify-between h-full">
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-bold text-white mb-3">
@@ -241,6 +242,97 @@ const Contact = () => {
                 <Sparkles size={14} />
               </a>
             </div>
+          </div>
+
+          {/* Right Column - Contact Form */}
+          <div className="lg:col-span-7 rounded-3xl border border-white/5 bg-[#181A20]/45 backdrop-blur-xl p-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 -mr-6 -mt-6 h-24 w-24 rounded-full bg-[#A3FF12]/5 blur-2xl pointer-events-none" />
+            <h3 className="text-xl font-bold text-white mb-6">Send a Message</h3>
+            
+            {status.text && (
+              <div className={`mb-6 p-4 rounded-xl border text-xs sm:text-sm font-medium ${
+                status.type === "success" 
+                  ? "bg-emerald-500/10 border-emerald-500/25 text-emerald-400" 
+                  : "bg-red-500/10 border-red-500/25 text-red-400"
+              }`}>
+                {status.text}
+              </div>
+            )}
+            
+            <form onSubmit={handleFormSubmit} className="space-y-5">
+              <div>
+                <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 select-none">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Enter your name"
+                  required
+                  className="w-full bg-[#181A20]/60 border border-white/5 rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#A3FF12] focus:ring-1 focus:ring-[#A3FF12] transition-all duration-300"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 select-none">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="Enter your email"
+                  required
+                  className="w-full bg-[#181A20]/60 border border-white/5 rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#A3FF12] focus:ring-1 focus:ring-[#A3FF12] transition-all duration-300"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 select-none">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  placeholder="Project inquiry, consulting call, etc."
+                  className="w-full bg-[#181A20]/60 border border-white/5 rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#A3FF12] focus:ring-1 focus:ring-[#A3FF12] transition-all duration-300"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 select-none">Your Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  placeholder="Describe your project details, required timeline, stack choice..."
+                  required
+                  className="w-full bg-[#181A20]/60 border border-white/5 rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#A3FF12] focus:ring-1 focus:ring-[#A3FF12] transition-all duration-300 resize-none"
+                />
+              </div>
+              
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#A3FF12] py-4 text-sm font-bold text-black hover:bg-[#8fE010] transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(163,255,18,0.15)] hover:shadow-[0_0_25px_rgba(163,255,18,0.3)] duration-300"
+              >
+                {isSubmitting ? (
+                  <>
+                    <span className="h-4 w-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                    Sending Message...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <Send size={14} />
+                  </>
+                )}
+              </button>
+            </form>
           </div>
         </div>
       </div>

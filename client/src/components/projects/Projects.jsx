@@ -19,10 +19,10 @@ const Projects = () => {
 
   // Predefined stylized CSS gradients matching each project name
   const gradientStyles = {
+    "Hackathon RICR": "from-blue-600/20 via-indigo-600/10 to-[#0b0b0f]",
+    "RSAT RICR": "from-[#A3FF12]/10 via-[#A3FF12]/5 to-[#0b0b0f]",
     "RentEase": "from-emerald-500/20 via-teal-600/10 to-[#0b0b0f]",
-    "Voting Management System": "from-blue-600/20 via-indigo-600/10 to-[#0b0b0f]",
-    "LMS Dashboard": "from-purple-600/20 via-pink-600/10 to-[#0b0b0f]",
-    "Portfolio Website": "from-[#A3FF12]/10 via-[#A3FF12]/5 to-[#0b0b0f]"
+    "LMS Dashboard": "from-purple-600/20 via-pink-600/10 to-[#0b0b0f]"
   };
 
   return (

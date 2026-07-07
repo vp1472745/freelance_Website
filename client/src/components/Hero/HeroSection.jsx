@@ -254,7 +254,7 @@ const Hero = () => {
               <motion.div
                 variants={fadeInUp}
                 animate={floatingCardAnimation(0)}
-                className="absolute -top-6 -left-6 flex items-center gap-2 rounded-2xl glass-panel p-3 shadow-2xl select-none"
+                className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 flex items-center gap-2 rounded-2xl glass-panel p-3 shadow-2xl select-none"
               >
                 <div className="rounded-lg bg-blue-500/10 p-2 text-blue-400">
                   <Code size={18} />
@@ -269,7 +269,7 @@ const Hero = () => {
               <motion.div
                 variants={fadeInUp}
                 animate={floatingCardAnimation(1.5)}
-                className="absolute top-1/3 -right-8 flex items-center gap-2 rounded-2xl glass-panel p-3 shadow-2xl select-none"
+                className="absolute top-1/3 -right-4 sm:-right-8 hidden sm:flex items-center gap-2 rounded-2xl glass-panel p-3 shadow-2xl select-none"
               >
                 <div className="rounded-lg bg-green-500/10 p-2 text-green-400">
                   <Server size={18} />
@@ -284,7 +284,7 @@ const Hero = () => {
               <motion.div
                 variants={fadeInUp}
                 animate={floatingCardAnimation(0.7)}
-                className="absolute bottom-12 -left-8 flex items-center gap-2 rounded-2xl glass-panel p-3 shadow-2xl select-none"
+                className="absolute bottom-12 -left-4 sm:-left-8 flex items-center gap-2 rounded-2xl glass-panel p-3 shadow-2xl select-none"
               >
                 <div className="rounded-lg bg-[#A3FF12]/10 p-2 text-[#A3FF12]">
                   <Database size={18} />
@@ -299,7 +299,7 @@ const Hero = () => {
               <motion.div
                 variants={fadeInUp}
                 animate={floatingCardAnimation(2.2)}
-                className="absolute -bottom-6 right-6 flex items-center gap-2 rounded-2xl glass-panel p-3 shadow-2xl select-none"
+                className="absolute -bottom-4 right-4 sm:-bottom-6 sm:right-6 flex items-center gap-2 rounded-2xl glass-panel p-3 shadow-2xl select-none"
               >
                 <div className="rounded-lg bg-cyan-500/10 p-2 text-cyan-400">
                   <Layers size={18} />
@@ -314,7 +314,7 @@ const Hero = () => {
               <motion.div
                 variants={fadeInUp}
                 animate={floatingCardAnimation(1.2)}
-                className="absolute bottom-1/2 -right-6 flex items-center gap-2 rounded-2xl bg-[#0b0b0f] border border-[#A3FF12]/20 p-2.5 shadow-2xl select-none"
+                className="absolute bottom-1/2 -right-4 sm:-right-6 hidden md:flex items-center gap-2 rounded-2xl bg-[#0b0b0f] border border-[#A3FF12]/20 p-2.5 shadow-2xl select-none"
               >
                 <CheckCircle2 size={14} className="text-[#A3FF12]" />
                 <span className="text-[10px] font-bold text-white tracking-wide">Available for Work</span>

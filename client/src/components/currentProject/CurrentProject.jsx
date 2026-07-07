@@ -59,7 +59,7 @@ const CurrentProject = () => {
   };
 
   return (
-    <section id="current-project" className="relative py-24 bg-[#0b0b0f] border-t border-white/5 overflow-hiddenBlueprint">
+    <section id="current-project" className="relative py-24 bg-[#0b0b0f] border-t border-white/5 overflow-hidden">
       {/* Background Neon Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#A3FF12]/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-purple-500/5 blur-[100px] rounded-full pointer-events-none" />

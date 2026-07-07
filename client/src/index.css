@@ -36,6 +36,9 @@
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(163, 255, 18, 0.2);
   }
+  body.no-scroll {
+    overflow: hidden;
+  }
 }
 
 /* Glassmorphism utility classes */
