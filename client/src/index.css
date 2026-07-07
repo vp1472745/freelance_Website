@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #A3FF12;
+  --color-bg-dark: #0B0B0F;
+  --color-card-dark: #181A20;
+  --color-text-white: #FFFFFF;
+  --font-sans: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #0B0B0F;
+    color: #FFFFFF;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Smooth scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0B0F;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #181A20;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(163, 255, 18, 0.2);
+  }
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(24, 26, 32, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(24, 26, 32, 0.85);
+  border-color: rgba(163, 255, 18, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), 0 0 20px 0 rgba(163, 255, 18, 0.05);
+}
+
+/* Custom glow effect */
+.glow-primary {
+  box-shadow: 0 0 25px rgba(163, 255, 18, 0.15);
+}
+
+.glow-text {
+  text-shadow: 0 0 15px rgba(163, 255, 18, 0.3);
+}
